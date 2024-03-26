@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello Patient</title>
+<title>Matrix Simulation</title>
 <style>
   body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
     background-color: black;
     color: #33ff33;
     font-family: "Courier New", Courier, monospace;
@@ -24,10 +25,24 @@
     position: absolute;
     white-space: nowrap;
   }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: #33ff33;
+    text-align: left;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace; /* Matching font */
+    font-size: 14px; /* Matching font size */
+  }
 </style>
 </head>
 <body>
 <div id="initialCommand">hellopatient ~ % </div>
+
+<footer>
+  © Hello Patient 2024
+</footer>
 
 <script>
   function generateMatrixLine() {
