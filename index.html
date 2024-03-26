@@ -3,35 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Patient Experience</title>
+<title>Matrix Simulation</title>
 <style>
-  /* Adding keyframes for the blinking cursor effect */
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    color: #33ff33;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
   }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+  #initialCommand {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  .text {
-    font-size: 24px;
-  }
-  .cursor {
-    border-left: 2px solid black;
-    animation: blink 1s step-start infinite;
+  .matrixLine {
+    position: absolute;
+    white-space: nowrap;
   }
 </style>
 </head>
 <body>
+<div id="initialCommand">hellopatient ~ % </div>
 
-<div class="container">
-  <span class="text">A new patient experience is coming soon<span class="cursor"></span></span>
-</div>
+<script>
+  function generateMatrixLine() {
+    const lineLength = Math.floor(Math.random() * 30) + 20; // Random line length between 20 and 50 characters
+    let matrixLine = '';
+    for (let i = 0; i < lineLength; i++) {
+      matrixLine += Math.random() < 0.5 ? '0' : '1';
+    }
+    return matrixLine;
+  }
+
+  function dropMatrixLine() {
+    const line = document.createElement('div');
+    line.textContent = generateMatrixLine();
+    line.classList.add('matrixLine');
+    document.body.appendChild(line);
+
+    // Random start position from the top of the screen, slightly below the initial command
+    const startPosition = Math.floor(Math.random() * window.innerWidth);
+    line.style.left = `${startPosition}px`;
+
+    // Animate the line dropping
+    let topPosition = 20; // Start just below the initial command
+    const interval = setInterval(() => {
+      topPosition += 10; // Adjust speed as necessary
+      line.style.top = `${topPosition}px`;
+
+      // Remove the line and clear interval when it goes off screen
+      if (topPosition > window.innerHeight + 50) {
+        clearInterval(interval);
+        document.body.removeChild(line);
+      }
+    }, 100);
+  }
+
+  // Start dropping matrix lines a little after the initial command is displayed
+  setTimeout(() => {
+    setInterval(dropMatrixLine, 150); // Adjust frequency of lines
+  }, 1000);
+</script>
 
 </body>
 </html>
