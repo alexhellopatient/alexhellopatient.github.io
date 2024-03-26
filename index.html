@@ -1,7 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Patient Experience</title>
+<style>
+  /* Adding keyframes for the blinking cursor effect */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .text {
+    font-size: 24px;
+  }
+  .cursor {
+    border-left: 2px solid black;
+    animation: blink 1s step-start infinite;
+  }
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages!!</p>
+
+<div class="container">
+  <span class="text">A new patient experience is coming soon<span class="cursor"></span></span>
+</div>
+
 </body>
 </html>
