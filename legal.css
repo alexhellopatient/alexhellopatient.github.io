@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Container for the document */
+.document-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #2f4f4f;
+    margin: 0;
+}
+
+.header .subtitle {
+    background: #f0e4d7;
+    color: #5c5c5c;
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    margin-top: 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 1.8em;
+    color: #2f4f4f;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e2e2e2;
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styles */
+p {
+    margin-bottom: 15px;
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Highlight Styles */
+.highlight {
+    font-weight: bold;
+}
+
+/* Effective Date Styles */
+.effective-date {
+    font-style: italic;
+    margin-bottom: 20px;
+}
