@@ -167,9 +167,24 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
-h1,
-h2,
-h3,
+h1 {
+font-size: 2.5em;
+font-weight: bold;
+margin-bottom: 0.5em;
+text-align: center;
+}
+h2 {
+font-size: 2em;
+font-weight: bold;
+margin-top: 1.5em;
+margin-bottom: 0.5em;
+}
+h3 {
+font-size: 1.5em;
+font-weight: bold;
+margin-top: 1em;
+margin-bottom: 0.5em;
+}
 h4,
 h5,
 h6 {
@@ -193,6 +208,10 @@ Add the correct font weight in Edge and Safari.
 b,
 strong {
   font-weight: bolder;
+}
+
+p {
+margin-bottom: 1em;
 }
 
 /*
